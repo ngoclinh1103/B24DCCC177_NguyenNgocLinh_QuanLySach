@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:fitsSystemWindows="true">
+
+    <!-- Thanh Top Bar -->
+    <LinearLayout
+        android:id="@+id/btnBackTopBarDetail"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#00796B"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:paddingHorizontal="16dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="←  Chi tiết sách"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_border"
+            android:padding="16dp"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:id="@+id/tvDetailName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tên sách"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/tvDetailAuthorCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tác giả • Thể loại"
+                android:textColor="#757575"
+                android:textSize="14sp"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:id="@+id/tvDetailStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#FFF3E0"
+                android:textColor="#E65100"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="4dp"
+                android:text="Tình trạng"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:layout_marginBottom="16dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đánh giá"
+                android:textColor="#757575"
+                android:textSize="12sp"/>
+
+            <RatingBar
+                android:id="@+id/rbDetailRating"
+                style="?android:attr/ratingBarStyleIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:stepSize="0.5"
+                android:progressTint="#FFC107"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ghi chú"
+                android:textColor="#757575"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/tvDetailNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sách dành cho người mới bắt đầu..."
+                android:textColor="#000000"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnMarkRead"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Đánh dấu đã đọc"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#00796B"
+            android:layout_marginBottom="8dp"/>
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Quay lại"
+            android:textColor="#00796B"
+            android:background="@drawable/bg_border"
+            android:backgroundTint="#FFFFFF"
+            android:layout_marginBottom="8dp"/>
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Xóa sách"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#D32F2F"/>
+    </LinearLayout>
+</LinearLayout>

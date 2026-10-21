@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Đã thêm fitsSystemWindows="true" để không bị đè thanh trạng thái -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:fitsSystemWindows="true">
+
+    <!-- Thanh Top Bar -->
+    <LinearLayout
+        android:id="@+id/btnBackTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#00796B"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:paddingHorizontal="16dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="←  Thêm sách"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tên sách"
+                android:textColor="#757575"
+                android:textSize="12sp"
+                android:layout_marginBottom="4dp"/>
+            <EditText
+                android:id="@+id/edtAddName"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_border"
+                android:paddingHorizontal="12dp"
+                android:hint="Ví dụ: Đắc nhân tâm"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tác giả"
+                android:textColor="#757575"
+                android:textSize="12sp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="4dp"/>
+            <EditText
+                android:id="@+id/edtAddAuthor"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_border"
+                android:paddingHorizontal="12dp"
+                android:hint="Ví dụ: Dale Carnegie"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thể loại"
+                android:textColor="#757575"
+                android:textSize="12sp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="4dp"/>
+            <Spinner
+                android:id="@+id/spnAddCategory"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_border"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tình trạng đọc"
+                android:textColor="#757575"
+                android:textSize="12sp"
+                android:layout_marginTop="12dp"/>
+            <RadioGroup
+                android:id="@+id/rgAddStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RadioButton android:id="@+id/rbUnread" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Chưa đọc" android:checked="true"/>
+                <RadioButton android:id="@+id/rbReading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Đang đọc"/>
+                <RadioButton android:id="@+id/rbRead" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Đã đọc"/>
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đánh giá"
+                android:textColor="#757575"
+                android:textSize="12sp"
+                android:layout_marginTop="12dp"/>
+            <RatingBar
+                android:id="@+id/rbAddRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:stepSize="1"
+                android:progressTint="#FFC107"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ghi chú"
+                android:textColor="#757575"
+                android:textSize="12sp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="4dp"/>
+            <EditText
+                android:id="@+id/edtAddNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minLines="3"
+                android:background="@drawable/bg_border"
+                android:padding="12dp"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:hint="Nhập ghi chú..."/>
+
+            <Button
+                android:id="@+id/btnSaveBook"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Lưu sách"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#00796B"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
